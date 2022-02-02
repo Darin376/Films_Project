@@ -1,0 +1,65 @@
+.SiteContentMoviesWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+ 
+.CategoriesPagesActiv {
+    color: red;
+    cursor: pointer;
+    width: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.CategoriesPages{
+    cursor: pointer;
+    width: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.CategoriesPagesWrapper {
+ font-size: 22px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+.SiteContentMovies {
+    display: flex;
+    padding:20px 30px 20px 10px;
+    width:200px;
+}
+.SiteContentcontainer h3 {
+ padding-left: 10px;
+}
+ 
+@media(max-width:650px){
+    .SiteContentcontainer h3 {
+        padding: 20px 0px 0px 10px;
+       }
+       .CategoriesPagesWrapper {
+        font-size: 20px;
+       }
+       .CategoriesPagesActiv {
+        width: 30px;
+    }
+    .CategoriesPages{
+        width: 30px;
+    }
+    }
+@media(max-width:400px){
+.SiteContentMovies {
+    padding:20px 0px;
+}
+.CategoriesPagesWrapper {
+    font-size: 16px;
+   }
+   .CategoriesPagesActiv {
+    width: 23px;
+}
+.CategoriesPages{
+    width: 23px;
+}
+}

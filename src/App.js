@@ -7,9 +7,9 @@ import Sitecontent from './Components/Sitecontent/Sitecontent';
 function App() {
   return (
     <Router>
-      <div >
+      <div className='app-wrapper'>
         <Header />
-        <div>
+        <div className='app-wrapper-content'>
           <Routes>
             <Route path='/' element={<Sitecontent />} />
             <Route path='*' element={<NotFoundPage />} />
@@ -20,5 +20,5 @@ function App() {
  
   );
 }
-
+ 
 export default App;

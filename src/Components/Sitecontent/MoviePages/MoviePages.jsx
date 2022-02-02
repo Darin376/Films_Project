@@ -1,41 +1,51 @@
 import React from "react";
 import SitecontentMovies from "../SitecontentMovies/SitecontentMovies";
 import { useState, useEffect } from 'react';
-import "./MoviePagesStyle.scss";
 import { useDispatch } from 'react-redux';
 import { addPages } from "../../../Redux/actions";
 import { createPages } from "../../../Data/createPages";
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
+import "./MoviePagesStyle.scss";
+import Spinner from "../../../Spinner/Spinner";
 
 const MoviePages = ({ AllMovies }) => {
     const [pages, setPages] = useState(1);
     const dispatch = useDispatch();
-    
+
     useEffect(() => {
         dispatch(addPages(pages))
     }, [pages])
 
+    useEffect(() => {
+        setPages(1)
+    }, [AllMovies.search])
+
     let quantityPages = [];
-    let pageCount = !AllMovies.totalResults ? null : Math.ceil(AllMovies.totalResults / AllMovies.Search.length);
+    let pageCount = !AllMovies.movies.totalResults ? null : Math.ceil(AllMovies.movies.totalResults / AllMovies.movies.Search.length);
     createPages(quantityPages, pageCount, pages);
 
-
+    if (!AllMovies.movies.Search.length) return <Spinner />
     return (
         <div className="SiteContentcontainer">
             <div>
-                {AllMovies.Search.map((item, index) => (
-                    <div key={index}>
-                        <SitecontentMovies moviesInfo={item} />
-                    </div>
-                ))}
-            </div>
-            <div className="CategoriesPagesWrapper">
-                <span onClick={() => { setPages(quantityPages[0]) }}>влево</span>
-                {quantityPages.map((p, index) => {
-                    return <div key={index} >
-                        <span className={pages === p ? "CategoriesPagesActiv" : "CategoriesPages"} onClick={() => { setPages(p) }}>{p}</span>
-                    </div>
-                })}
-                <span onClick={() => { setPages(quantityPages[quantityPages.length - 1]) }}>вправо</span>
+                <h3>You search for: {AllMovies.search} {AllMovies.movies.totalResults}</h3>
+                <div className="SiteContentMoviesWrapper">
+                    {AllMovies.movies.Search.map((item, index) => (
+                        <div key={index} className="SiteContentMovies">
+                            <SitecontentMovies moviesInfo={item} />
+                        </div>
+                    ))}
+                </div>
+                <div className="CategoriesPagesWrapper">
+                    <ArrowBackIosNewIcon  style={{  cursor: 'pointer', paddingRight: 10 }} onClick={() => { setPages(quantityPages[0]) }}/>
+                    {quantityPages.map((p, index) => {
+                        return <div key={index} >
+                            <div className={pages === p ? "CategoriesPagesActiv" : "CategoriesPages"} onClick={() => { setPages(p) }}>{p}</div>
+                        </div>
+                    })}
+                    <ArrowForwardIosIcon  style={{  cursor: 'pointer'}}  onClick={() => { setPages(quantityPages[quantityPages.length - 1]) }}/>
+                </div>
             </div>
         </div>
     );
