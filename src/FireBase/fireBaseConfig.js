@@ -1,5 +1,4 @@
-
- const firebaseConfig = {
+const firebaseConfig = {
   apiKey: "AIzaSyAml3mGu2gBEU0hHRSYq75e755Y_VXJ6cc",
   authDomain: "shop-a636c.firebaseapp.com",
   projectId: "shop-a636c",

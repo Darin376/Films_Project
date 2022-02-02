@@ -26,12 +26,10 @@ html, body{
     text-decoration: none;
     color: var(--text-gray);
   }
-  
   h1{
     font-family: var(--Lexend);
     font-size: 2.5rem;
-  }
-  
+  } 
   h2{
     font-family: var(--Lexend);
   }
@@ -40,7 +38,6 @@ html, body{
     font-family: var(--Abel);
     font-size: 1.3rem;
   }
-  
   button.btn{
     border: none;
     border-radius: 1rem;
@@ -48,7 +45,6 @@ html, body{
     font-family: var(--Livvic);
     cursor: pointer;
   }
-  
   span{
     font-family: var(--Abel);
   }

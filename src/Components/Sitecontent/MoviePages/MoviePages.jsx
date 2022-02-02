@@ -14,15 +14,16 @@ const MoviePages = ({ AllMovies }) => {
     const dispatch = useDispatch();
 
     useEffect(() => {
+        window.scrollTo(0, 0);
         dispatch(addPages(pages))
     }, [pages])
 
     useEffect(() => {
         setPages(1)
     }, [AllMovies.search])
-
+    
     let quantityPages = [];
-    let pageCount = !AllMovies.movies.totalResults ? null : Math.ceil(AllMovies.movies.totalResults / AllMovies.movies.Search.length);
+    let pageCount = !AllMovies.movies.totalResults ? null : Math.ceil(AllMovies.movies.totalResults / 10);
     createPages(quantityPages, pageCount, pages);
 
     if (!AllMovies.movies.Search.length) return <Spinner />
@@ -38,13 +39,13 @@ const MoviePages = ({ AllMovies }) => {
                     ))}
                 </div>
                 <div className="CategoriesPagesWrapper">
-                    <ArrowBackIosNewIcon  style={{  cursor: 'pointer', paddingRight: 10 }} onClick={() => { setPages(quantityPages[0]) }}/>
+                    <ArrowBackIosNewIcon style={{ cursor: 'pointer', paddingRight: 10 }} onClick={() => { setPages(quantityPages[0]) }} />
                     {quantityPages.map((p, index) => {
                         return <div key={index} >
                             <div className={pages === p ? "CategoriesPagesActiv" : "CategoriesPages"} onClick={() => { setPages(p) }}>{p}</div>
                         </div>
                     })}
-                    <ArrowForwardIosIcon  style={{  cursor: 'pointer'}}  onClick={() => { setPages(quantityPages[quantityPages.length - 1]) }}/>
+                    <ArrowForwardIosIcon style={{ cursor: 'pointer' }} onClick={() => { setPages(quantityPages[quantityPages.length - 1]) }} />
                 </div>
             </div>
         </div>

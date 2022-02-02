@@ -20,10 +20,10 @@
     justify-content: center;
 }
 .CategoriesPagesWrapper {
- font-size: 22px;
- display: flex;
- align-items: center;
- justify-content: center;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .SiteContentMovies {
@@ -32,21 +32,21 @@
     width:200px;
 }
 .SiteContentcontainer h3 {
- padding-left: 10px;
+    padding-left: 10px;
 }
  
 @media(max-width:650px){
-    .SiteContentcontainer h3 {
-        padding: 20px 0px 0px 10px;
+.SiteContentcontainer h3 {
+    padding: 20px 0px 0px 10px;
        }
-       .CategoriesPagesWrapper {
-        font-size: 20px;
+.CategoriesPagesWrapper {
+    font-size: 20px;
        }
-       .CategoriesPagesActiv {
-        width: 30px;
+.CategoriesPagesActiv {
+    width: 30px;
     }
-    .CategoriesPages{
-        width: 30px;
+.CategoriesPages{
+    width: 30px;
     }
     }
 @media(max-width:400px){

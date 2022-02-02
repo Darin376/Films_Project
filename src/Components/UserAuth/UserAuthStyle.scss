@@ -1,0 +1,40 @@
+.UserGoogleButton {
+    width: 100%;
+    height: auto;
+    padding: 6px;
+    font-size: 15px;
+    background: var(--sky);
+    border: 1px solid black;
+    border-radius: 10px;
+   cursor: pointer;
+}
+ .headerLogout {
+   color: black;
+   cursor: pointer;
+ }
+ .headerLogout:hover{
+    color: red;
+    }
+.UserGoogleButton:hover {
+    width: 100%;
+    background: transparent;
+    border: 1px solid var(--white);
+    color: green;
+}
+.UserAuth img {
+    width: 30px;
+    height: 30px;
+    padding-left: 20px;
+}
+.UserAuth p{
+     padding:0px  15px 0px 10px;
+}
+.UserAuthName {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.UserAuth {
+    display: flex;
+    align-items: center;
+}

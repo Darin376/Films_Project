@@ -23,7 +23,7 @@
 .HomePageMoviesWrapper h2 {
     color:red
  }
- .HomePageMoviesWrapperHome {
+ .HomePageMoviesContainer {
      display: flex;
      flex-direction: column;
      justify-content:center;
@@ -38,11 +38,17 @@
      width: 100%;
      height: 60vh;
  }
-.HomePageMoviesImgWrapper img {
-    width: 350px;
+.HomePageMoviesImg {
+    background-image: url('../../../Img/no-found.jpg');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: cover;
+    width: 320px;
+    height:340px;
 }
 @media(max-width:380px){
-    .HomePageMoviesImgWrapper img {
+    .HomePageMoviesImg  {
         width: 280px;
+        height:300px;
     }
 }

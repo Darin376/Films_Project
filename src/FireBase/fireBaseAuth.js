@@ -1,4 +1,4 @@
-import { 
+import {
     GoogleAuthProvider,
     getAuth,
     signInWithPopup
@@ -10,13 +10,13 @@ const app = initializeApp(firebaseConfig);
 export const auth = getAuth();
 
 const provider = new GoogleAuthProvider();
- 
-export const  signIn = async () => {
+
+export const signIn = async () => {
     return signInWithPopup(auth, provider)
-    .then((result) => {
-        const user = result.user;
-        return user;
-    }).catch((error) => {
-        throw error;
-    });
+        .then((result) => {
+            const user = result.user;
+            return user;
+        }).catch((error) => {
+            throw error;
+        });
 }

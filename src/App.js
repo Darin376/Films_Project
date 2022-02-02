@@ -1,3 +1,4 @@
+import React from "react";
 import './App.scss';
 import { Header } from './Components/Header/Header';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
@@ -17,8 +18,7 @@ function App() {
         </div>
       </div>
     </Router >
- 
   );
 }
- 
+
 export default App;

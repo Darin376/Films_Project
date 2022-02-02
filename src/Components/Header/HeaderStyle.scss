@@ -44,15 +44,10 @@
     cursor:pointer;
     font-weight:600;
     font-size: 22px;
-    color:#3f4954;
-    
+    color:#3f4954; 
 }
 .headerRight {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-   
+   padding-right: 20px;
 }
 .headerMenuItem {
     font-size: 14px;
@@ -62,46 +57,7 @@
     align-items: center;
     justify-content: center;
 }
-.UserGoogleButton {
-    width: 100%;
-    height: auto;
-    padding: 6px;
-    font-size: 15px;
-    background: var(--sky);
-    border: 1px solid black;
-    border-radius: 10px;
-   cursor: pointer;
-}
- .headerLogout {
-   color: black;
-   cursor: pointer;
- }
- .headerLogout:hover{
-    color: red;
-    }
-.UserGoogleButton:hover {
-    width: 100%;
-    background: transparent;
-    border: 1px solid var(--white);
-    color: green;
-}
-.UserAuth img {
-    width: 30px;
-    height: 30px;
-}
-.UserAuth p{
-     padding:0px  15px 0px 10px;
-}
-.UserAuthName {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.UserAuth {
-    display: flex;
-    align-items: center;
-}
- .headerRightWrapper {
+.headerRightWrapper {
      width: 100%;
      display: flex;
      align-items: center;
@@ -127,10 +83,10 @@
 
 .headerLogo {
     font-size:20px ;
-    }
+}
 .headerMenuItem {
     font-size: 22px;
-  }
+}
 .headerMenuItemProfile {
     font-size: 12px;
     margin-left: 15px;
@@ -148,6 +104,7 @@
 .headerWrapper {
     height:100px;
 }
+ 
 .headerRightWrapper {
     padding-bottom: 6px;
 }
@@ -155,23 +112,24 @@
     display: flex;
     justify-content: center;
     align-items: center;
- }
+}
  .headerLogo {
      font-size: 20px;
-     margin:10px 0px;
- }
+     margin:5px 0px;
+}
  .UserGoogleButton {
-    margin: 0px;
+    padding: 10px;
     font-size: 12px;
 }
 .headerLeft {
     width:98%;
     margin-top: 5px;
     
- }
+}
  .headerRight {
-     padding: 0px;
- }
+    padding: 0px 20px 0px 5px;
+}
+ 
 .headerProfileIcon {
     display: block;
     flex-direction: column;
@@ -185,26 +143,26 @@
     z-index: 2;
     position: fixed;
     width:100%;
-    }
+}
 .headerProfileIconRight {
     justify-content: space-evenly;
-     }
+}
 .UserAuth p{
      padding:0px 5px 0px 0px;
      font-size: 14px;
-    }
-    .UserAuthName {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+}
+.UserAuthName {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .UserAuth {
-        display: flex;
-        align-items: center;
-    }
-    .headerRightWrapper{
-        padding-left: 10px;
-    }
+    display: flex;
+    align-items: center;
+}
+.headerRightWrapper{
+     padding-left: 10px;
+}
   }
 
 @media(max-width:412px){
@@ -213,10 +171,10 @@
 .headerMenuItem {
     font-size: 12px;
     cursor: pointer;
-  }
+}
 .headerProfileIconRight {
   
-   justify-content: center;
+    justify-content: center;
 }
 .headerWrapper {
     height:100px;

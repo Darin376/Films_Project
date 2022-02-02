@@ -11,11 +11,12 @@ const Sitecontent = () => {
     const { MoviesReducer } = state;
     return MoviesReducer
   });
- let notSearch = AllMovies.movies.Response=='False'?false:true;
- if (!AllMovies) return  <Spinner/>
+  let notSearch = AllMovies.movies.Response == 'False' ? false : true;
+  
+  if (!AllMovies) return <Spinner />
   return (
     <div className='MuviWrapper'>
-      {!AllMovies.movies.Search ? <HomePageMovies notSearch = {notSearch}/> : <MoviePages AllMovies ={AllMovies}  />}
+      {!AllMovies.movies.Search ? <HomePageMovies notSearch={notSearch} /> : <MoviePages AllMovies={AllMovies} />}
     </div>
   );
 };
